@@ -1,0 +1,8 @@
+@use "../../../../../public/assets/styles/all-styles.scss" as *;
+
+.add-new-contact {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 120%;
+  background-color: $mainColor;
+}

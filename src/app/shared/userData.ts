@@ -1,4 +1,4 @@
-const users = [
+export const users = [
   {
     name: 'Anna Müller',
     mail: 'anna.mueller@example.com',
