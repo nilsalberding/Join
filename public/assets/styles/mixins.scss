@@ -1,4 +1,6 @@
 @use "../styles/variables.scss" as color;
+
+// #region #### DIRECTION MIXINS ####
 @mixin fl(
   $jc: center,
   $alit: center,
@@ -20,10 +22,15 @@
   align-items: $alit;
   gap: $gap;
 }
+// #endregion #### DIRECTION MIXINS ####
 
-// #region button-layout-style
-// Beim benutzen muss die width, height, gap = (für display-flex) angegeben werden
-// Beim erstellen des buttons im HTML das icon-image mit ins button-element legen
+// BOX-SHADOW-STYLE
+@mixin box-shadow-style() {
+  box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.08);
+}
+
+// #region #### BUTTON-LAYOUT-STYLE #####
+// INFO: Beim erstellen des buttons im HTML das icon-image mit ins button-element legen, damit flex zentriert
 @mixin button-layout($width, $height, $gap) {
   @include displayFlex(row, center, center, $gap);
   width: $width;
@@ -34,7 +41,7 @@
   font-weight: bold;
   padding: 12px;
   border-radius: 10px;
-  box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.08);
+  @include box-shadow-style();
 }
 
 @mixin press-button-style($width, $height, $gap) {
@@ -46,3 +53,4 @@
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.4);
   }
 }
+// #endregion #### BUTTON-LAYOUT-STYLE #####
