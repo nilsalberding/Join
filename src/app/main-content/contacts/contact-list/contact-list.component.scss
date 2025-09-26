@@ -1,8 +1,13 @@
 @use "../../../../../public/assets/styles/all-styles.scss" as *;
 
-.add-new-contact {
+.add-new-contact-btn {
   font-size: 21px;
   font-weight: bold;
   line-height: 120%;
   background-color: $mainColor;
+  @include displayFlex(row, center, center, 16px);
+  padding: 12px;
+  border-radius: 10px;
+  width: 352px;
+  height: 56px;
 }
